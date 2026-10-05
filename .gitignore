@@ -1,0 +1,8 @@
+/dist/
+/build/
+*.egg-info/
+__pycache__/
+.venv/
+.pytest_cache/
+/deneme/
+/deneme/
