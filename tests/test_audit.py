@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from depaudit.audit import _typosquat, audit
+from depsweep.audit import _typosquat, audit
 
 
 def _w(tmp_path, name, text):

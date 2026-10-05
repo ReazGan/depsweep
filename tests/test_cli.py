@@ -4,7 +4,7 @@ import json
 
 from click.testing import CliRunner
 
-from depaudit.cli import main
+from depsweep.cli import main
 
 
 def _w(tmp_path, name, text):

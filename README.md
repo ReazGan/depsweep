@@ -1,32 +1,32 @@
-# depaudit
+# depsweep
 
-[![CI](https://github.com/ReazGan/depaudit/actions/workflows/ci.yml/badge.svg)](https://github.com/ReazGan/depaudit/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/depaudit)](https://pypi.org/project/depaudit/)
+[![CI](https://github.com/ReazGan/depsweep/actions/workflows/ci.yml/badge.svg)](https://github.com/ReazGan/depsweep/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/depsweep)](https://pypi.org/project/depsweep/)
 
 Find supply-chain risks in your npm and pip dependency files.
 
 Most malicious packages don't need you to call them. They run a script the
 moment you `npm install`, or they ride in on a name one letter off a package you
-trust. depaudit reads `package.json`, `requirements.txt`, lockfiles and installed
+trust. depsweep reads `package.json`, `requirements.txt`, lockfiles and installed
 `node_modules` manifests and flags the risks you can see without running anything.
 
 Runs offline. No registry calls, nothing leaves your machine.
 
-![depaudit flagging an install hook in a dependency, a git source and a typosquat](https://raw.githubusercontent.com/ReazGan/depaudit/main/docs/screenshot.svg)
+![depsweep flagging an install hook in a dependency, a git source and a typosquat](https://raw.githubusercontent.com/ReazGan/depsweep/main/docs/screenshot.svg)
 
 ## Install
 
 ```
-pip install depaudit
+pip install depsweep
 ```
 
 ## Usage
 
 ```
-depaudit                 scan the current directory
-depaudit path            scan a directory
-depaudit --min high      only high and critical findings
-depaudit --json          machine-readable output
+depsweep                 scan the current directory
+depsweep path            scan a directory
+depsweep --min high      only high and critical findings
+depsweep --json          machine-readable output
 ```
 
 Exit status is `0` when clean, `1` when there is a finding at or above the fail
@@ -36,17 +36,17 @@ level (`--fail-on`, default `high`), and `2` on error.
 
 ```yaml
 repos:
-  - repo: https://github.com/ReazGan/depaudit
+  - repo: https://github.com/ReazGan/depsweep
     rev: v0.1.0
     hooks:
-      - id: depaudit
+      - id: depsweep
 ```
 
 ### GitHub Action
 
 ```yaml
 - uses: actions/checkout@v4
-- uses: ReazGan/depaudit@v0.1.0
+- uses: ReazGan/depsweep@v0.1.0
 ```
 
 ## What it checks

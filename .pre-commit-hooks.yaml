@@ -1,7 +1,7 @@
-- id: depaudit
-  name: depaudit (dependency supply-chain)
+- id: depsweep
+  name: depsweep (dependency supply-chain)
   description: Find supply-chain risks in npm and pip dependency files.
-  entry: depaudit
+  entry: depsweep
   language: python
   pass_filenames: false
   always_run: true

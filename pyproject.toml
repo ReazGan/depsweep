@@ -1,5 +1,5 @@
 [project]
-name = "depaudit"
+name = "depsweep"
 version = "0.1.0"
 description = "Find supply-chain risks in npm and pip dependency files: install hooks, non-registry sources, insecure URLs, typosquats."
 readme = "README.md"
@@ -20,15 +20,15 @@ classifiers = [
 dependencies = ["click>=8.1", "rich>=13.7"]
 
 [project.urls]
-Homepage = "https://github.com/ReazGan/depaudit"
-Issues = "https://github.com/ReazGan/depaudit/issues"
+Homepage = "https://github.com/ReazGan/depsweep"
+Issues = "https://github.com/ReazGan/depsweep/issues"
 
 [project.scripts]
-depaudit = "depaudit.cli:main"
+depsweep = "depsweep.cli:main"
 
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["depaudit*"]
+include = ["depsweep*"]
