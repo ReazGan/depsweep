@@ -1,0 +1,22 @@
+name: depaudit
+description: Find supply-chain risks in npm and pip dependency files.
+branding:
+  icon: package
+  color: gray-dark
+inputs:
+  path:
+    description: Path to scan.
+    default: "."
+  fail-on:
+    description: Lowest severity that fails the job.
+    default: high
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.x"
+    - shell: bash
+      run: pip install depaudit
+    - shell: bash
+      run: depaudit "${{ inputs.path }}" --fail-on "${{ inputs.fail-on }}"

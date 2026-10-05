@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="511" viewBox="0 0 800 511">
+<rect width="800" height="511" rx="8" fill="#1d2026"/>
+<g fill="#3a3f48"><circle cx="20" cy="18" r="5"/><circle cx="38" cy="18" r="5"/><circle cx="56" cy="18" r="5"/></g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" xml:space="preserve">
+<text y="52" style="white-space:pre"><tspan x="22.0" fill="#cdd3dc" >$ depaudit</tspan></text>
+<text y="71" style="white-space:pre"><tspan x="22.0" fill="#cdd3dc" >depaudit 0.1.0</tspan></text>
+<text y="90" style="white-space:pre"></text>
+<text y="109" style="white-space:pre"><tspan x="22.0" fill="#cdd3dc" >node_modules/analytics-helper/package.json</tspan></text>
+<text y="128" style="white-space:pre"><tspan x="47.2" fill="#cdd3dc" >HIGH   Dependency runs a script at install time  install-hook</tspan></text>
+<text y="147" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >package: analytics-helper</tspan></text>
+<text y="166" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >Install hooks (postinstall) run automatically on `npm install`, before any code is</tspan></text>
+<text y="185" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >imported. This is the usual way malicious packages execute. Review what this script</tspan></text>
+<text y="204" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >does and whether you trust this dependency.</tspan></text>
+<text y="223" style="white-space:pre"></text>
+<text y="242" style="white-space:pre"><tspan x="22.0" fill="#cdd3dc" >package.json</tspan></text>
+<text y="261" style="white-space:pre"><tspan x="47.2" fill="#cdd3dc" >HIGH   Dependency name looks like a typo of a popular package  typosquat</tspan></text>
+<text y="280" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >package: reqeust</tspan></text>
+<text y="299" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >&#x27;reqeust&#x27; is one character away from &#x27;request&#x27;, a very popular package.</tspan></text>
+<text y="318" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >Typosquatting packages use near-identical names to get installed by mistake. Confirm</tspan></text>
+<text y="337" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >this is the package you meant.</tspan></text>
+<text y="356" style="white-space:pre"><tspan x="47.2" fill="#cdd3dc" >MEDIUM   Dependency pulled from outside the registry  non-registry-source</tspan></text>
+<text y="375" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >package: internal-tools</tspan></text>
+<text y="394" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >&#x27;internal-tools&#x27; is installed from git+http://git.internal.example.com/tools.git,</tspan></text>
+<text y="413" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >not the npm registry, so it is not reviewed, versioned or integrity-checked like a</tspan></text>
+<text y="432" style="white-space:pre"><tspan x="72.4" fill="#cdd3dc" >published package. Whoever controls that source controls the code.</tspan></text>
+<text y="451" style="white-space:pre"></text>
+<text y="470" style="white-space:pre"><tspan x="22.0" fill="#cdd3dc" >2 high  1 medium</tspan></text>
+</g></svg>

@@ -1,0 +1,7 @@
+- id: depaudit
+  name: depaudit (dependency supply-chain)
+  description: Find supply-chain risks in npm and pip dependency files.
+  entry: depaudit
+  language: python
+  pass_filenames: false
+  always_run: true
